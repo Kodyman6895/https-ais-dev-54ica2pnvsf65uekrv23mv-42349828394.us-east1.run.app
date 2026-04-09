@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Anton", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-gold: #FFD700;
+  --color-gold-dark: #B8860B;
+  --color-gangster-black: #0A0A0A;
+  --color-gangster-gray: #1A1A1A;
+
+  --color-background: var(--color-gangster-black);
+  --color-foreground: #FFFFFF;
+  --color-card: var(--color-gangster-gray);
+  --color-card-foreground: #FFFFFF;
+  --color-border: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+.graffiti-text {
+  @apply font-display tracking-wider uppercase;
+  text-shadow: 3px 3px 0px theme('colors.red.600'), 6px 6px 0px theme('colors.black');
+}
+
+.gold-gradient {
+  background: linear-gradient(45deg, #B8860B, #FFD700, #B8860B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gangster-card {
+  @apply bg-card border-2 border-border rounded-none shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)];
+}
+
+@custom-variant dark (&:is(.dark *));

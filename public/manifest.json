@@ -1,0 +1,21 @@
+{
+  "name": "Big Homie AI",
+  "short_name": "Big Homie",
+  "description": "The toughest, most loyal AI assistant from the streets.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#FFD700",
+  "icons": [
+    {
+      "src": "https://picsum.photos/seed/gangster/192/192",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://picsum.photos/seed/gangster/512/512",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
